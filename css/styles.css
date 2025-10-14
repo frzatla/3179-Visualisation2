@@ -1,0 +1,39 @@
+body {
+    font-family: Open Sans, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #F5F1E8;
+  }  
+
+  h1 {
+    text-align: center;
+    color: #1C352D;
+    font-weight: 800;
+  }
+
+  h2 {
+    text-align: left;
+    color: #1C352D;
+    font-weight: 1000;
+    padding-right: 20px;
+  }
+
+  p {
+    text-align: center;
+    color: #666;
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+
+  #vis {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+  }
+
+  .footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 12px;
+    color: #666;
+  }
