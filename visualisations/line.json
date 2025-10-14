@@ -1,0 +1,124 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 350,
+    "height": 200,
+    "title": {
+      "text": "Species Discovered Per Year",
+      "subtitle": "Temporal trends in wildlife species discovery across Australian states"
+    },
+    "data": {
+      "url": "https://raw.githubusercontent.com/frzatla/3179-Visualisation2/main/data/wildlife_species_counts_by_state_year.csv"
+    },
+    "params": [
+      {
+        "name": "State_selection",
+        "value": "All",
+        "bind": {
+          "input": "select",
+          "options": [
+            "All",
+            "New South Wales",
+            "Victoria",
+            "Queensland",
+            "South Australia",
+            "Western Australia",
+            "Tasmania",
+            "Northern Territory",
+            "Australian Capital Territory"
+          ],
+          "labels": [
+            "All States",
+            "New South Wales",
+            "Victoria",
+            "Queensland",
+            "South Australia",
+            "Western Australia",
+            "Tasmania",
+            "Northern Territory",
+            "Australian Capital Territory"
+          ],
+          "name": "Select State: "
+        }
+      }
+    ],
+    "transform": [
+      {
+        "filter": "State_selection == 'All' || datum.state == State_selection"
+      }
+    ],
+    "mark": {
+      "type": "line",
+      "point": true,
+      "strokeWidth": 2
+    },
+    "encoding": {
+      "x": {
+        "field": "year",
+        "type": "ordinal",
+        "title": "Year",
+        "axis": {
+          "labelAngle": -45
+        }
+      },
+      "y": {
+        "field": "species_count",
+        "type": "quantitative",
+        "title": "Species Count",
+        "scale": {
+          "zero": false
+        }
+      },
+      "color": {
+        "field": "state",
+        "type": "nominal",
+        "title": "State",
+        "scale": {
+          "domain": [
+            "New South Wales",
+            "Victoria",
+            "Queensland",
+            "South Australia",
+            "Western Australia",
+            "Tasmania",
+            "Northern Territory",
+            "Australian Capital Territory"
+          ],
+          "range": [
+            "#1f77b4",
+            "#ff7f0e",
+            "#2ca02c",
+            "#d62728",
+            "#9467bd",
+            "#8c564b",
+            "#e377c2",
+            "#17becf"
+          ]
+        },
+        "legend": {
+          "title": "State",
+          "orient": "right"
+        }
+      },
+      "tooltip": [
+        {
+          "field": "state",
+          "type": "nominal",
+          "title": "State"
+        },
+        {
+          "field": "year",
+          "type": "ordinal",
+          "title": "Year"
+        },
+        {
+          "field": "species_count",
+          "type": "quantitative",
+          "title": "Species Count",
+          "format": ","
+        }
+      ]
+    },
+    "config": {
+      "background": "#F5F1E8"
+    }
+  }
