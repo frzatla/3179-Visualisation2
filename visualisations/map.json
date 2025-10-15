@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 900,
-  "height": 600,
+  "width": 750,
+  "height": 500,
   "padding": {
     "left": 10,
     "right": 100,
@@ -79,7 +79,7 @@
             "symbolStrokeWidth": 1.5,
             "symbolOpacity": 0.5,
             "titlePadding": 10,
-            "legendX": -100,
+            "legendX": -115,
             "legendY": 50
           }
         },
@@ -91,7 +91,7 @@
             "scheme": "greens"
           },
           "legend": {
-            "padding": 20,
+            "padding": 10,
             "offset": -100,
             "orient": "top-left",
             "direction": "vertical",
