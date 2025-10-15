@@ -3,7 +3,9 @@
 
 <head>
   <meta charset="utf-8" />
-  <title> Wildlife in Australia </title>
+  <title> Visualisation 2 </title>
+  
+  <!-- For Vega & Vega-lite-->
   <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
@@ -13,8 +15,8 @@
     integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- For CSS-->
   <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
-
 </head>
 
 <body>
@@ -22,7 +24,7 @@
   <div class="page">  
 
     <!-- pure grid group -->
-    <div class="pure-g">
+    <div class="pure-g" >
       <div class="pure-u-1-1">
         <h1> Wildlife in Australia </h1>
         <p> Exploring animal species richness and distribution across Australian states. </p>
@@ -38,22 +40,41 @@
       </div>
     <div class="pure-u-2-5" style="z-index: 10; height: fit-content;">
       <h2>Animal Species Count per State in Australia </h2>
-      <p style="text-align: left;">Australia is one of the worlds most diverse hotspots. About 87% of its mammals, 
-        93% of reptiles and 94% of frogs, plus about 45% of birds, are found nowhere else on Earth. <br> (Animals | NSW State of the Environment, 2021). </p>
-        <p style="text-align: right; font-size: 15px;"> Queensland stands out in our data as the most biodiverse state, with 38,268 distinct animal species recorded. 
-          Queensland holds around 70% of Australia’s mammals and 80% of its native birds, and more than half of its reptiles, frogs and plants, making it widely described as the nation’s most naturally diverse state.
-        <br>    (Biodiscovery in Queensland | Business Queensland, 2020)</p>
+      <p style="text-align: left; font-size: 17px;">
+        Australia is one of the worlds most diverse hotspots. About 87% of its mammals, 93% of reptiles and 94% of frogs, plus about 45% of birds, are found nowhere else on Earth. 
+        <br> (Animals | NSW State of the Environment, 2021). </p>
+
+        <p style="text-align: left; font-size: 15px;"> 
+          Queensland stands out in our data as the most biodiverse state, with 38,268 distinct animal species recorded. Queensland holds around 70% of Australia’s mammals and 80% of its native birds, 
+          and more than half of its reptiles, frogs and plants, making it widely described as the nation’s most naturally diverse state.
+        <br>(Biodiscovery in Queensland | Business Queensland, 2020)</p>
+        
+        <p style="text-align: left; font-size: 13px; padding-left: 30px;""> 
+          Following Queensland, New South Wales and Western Australia emerge as the next richest states in our data, with about 29,739 and 20,946 distinct animal species recorded respectively. 
+        <br><br>These figures reflect NSW’s spread from alpine ranges to temperate forests and coasts, and WA’s vast deserts, tropical north and globally significant southwest hotspot.</p>
     </div>
   </div>
     <!-- end pure grid group -->
 
-    <!-- For the donut chart-->
+
+     <!-- Section heading for charts below -->
+     <div class="pure-g">
+      <div class="pure-u-1-1">
+        <h2 style="margin-top: 40px;">Species Discovery Trends and Group Distribution</h2>
+        <p style="font-size: 15px; margin-bottom: 30px;">
+          The line chart reveals a remarkable upward trend in species discoveries from 2000 to 2024, with Queensland and New South Wales leading in both volume and growth rate. This acceleration reflects advances in biodiversity research methods, increased survey efforts, and improved taxonomic documentation. The donut chart complements this by showing that insects comprise the vast majority of documented species, followed by other invertebrates and birds. Together, these visualizations highlight both the pace of ongoing biodiversity discovery in Australia and the taxonomic groups driving these numbers, with invertebrates representing the frontier of unexplored diversity.
+    </p>
+        </p>
+      </div>
+    </div>
+
+    <!-- For the line chart-->
     <!-- pure grid group -->
     <div class="pure-g">
       <div class="pure-u-3-5">
         <div id="vis3" class="vis-container"></div>
       </div>
-      <!-- For the line chart-->
+      <!-- For the donut chart-->
       <div class="pure-u-2-5">
         <div id="vis2" class="vis-container"></div>
       </div>
@@ -70,11 +91,11 @@
   </div> 
 
   <script type="text/javascript">
-  var specVis1 = "visualisations/map.json";
+  var specVis1 = "map.json";
   
-  var specVis2 = "visualisations/donut.json";
+  var specVis2 = "donut.json";
 
-  var specVis3 = "visualisations/line.json";
+  var specVis3 = "line.json";
 
   vegaEmbed('#vis1', specVis1, { "actions": false }).then(function (result) {
   }).catch(console.error);
