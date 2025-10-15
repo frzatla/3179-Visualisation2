@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 350,
+    "width": "container",
     "height": 200,
     "title": {
       "text": "Species Discovered Per Year",
