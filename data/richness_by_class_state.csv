@@ -1,57 +1,57 @@
-state,group,species_count
-Australian Capital Territory,Insects,4866
-Australian Capital Territory,Other animals,864
-Australian Capital Territory,Birds,419
-Australian Capital Territory,Fish,252
-Australian Capital Territory,Mammals,93
-Australian Capital Territory,Reptiles,80
-Australian Capital Territory,Amphibians,37
-New South Wales,Insects,20368
-New South Wales,Other animals,8789
-New South Wales,Fish,1536
-New South Wales,Birds,743
-New South Wales,Reptiles,398
-New South Wales,Mammals,256
-New South Wales,Amphibians,117
-Northern Territory,Insects,6392
-Northern Territory,Other animals,3758
-Northern Territory,Fish,826
-Northern Territory,Birds,623
-Northern Territory,Reptiles,491
-Northern Territory,Mammals,234
-Northern Territory,Amphibians,83
-Queensland,Insects,24477
-Queensland,Other animals,12299
-Queensland,Fish,2063
-Queensland,Birds,726
-Queensland,Reptiles,615
-Queensland,Mammals,280
-Queensland,Amphibians,149
-South Australia,Insects,8084
-South Australia,Other animals,3946
-South Australia,Birds,624
-South Australia,Fish,522
-South Australia,Reptiles,335
-South Australia,Mammals,202
-South Australia,Amphibians,35
-Tasmania,Insects,6892
-Tasmania,Other animals,4498
-Tasmania,Fish,478
-Tasmania,Birds,420
-Tasmania,Mammals,112
-Tasmania,Reptiles,42
-Tasmania,Amphibians,25
-Victoria,Insects,13099
-Victoria,Other animals,4654
-Victoria,Birds,606
-Victoria,Fish,550
-Victoria,Mammals,186
-Victoria,Reptiles,165
-Victoria,Amphibians,62
-Western Australia,Insects,11161
-Western Australia,Other animals,8417
-Western Australia,Fish,1668
-Western Australia,Reptiles,628
-Western Australia,Birds,623
-Western Australia,Mammals,235
-Western Australia,Amphibians,100
+state,group,species_count,latitude,longitude
+Australian Capital Territory,Insects,4866,-35.3,149.1
+Australian Capital Territory,Other animals,864,-35.3,149.1
+Australian Capital Territory,Birds,419,-35.3,149.1
+Australian Capital Territory,Fish,252,-35.3,149.1
+Australian Capital Territory,Mammals,93,-35.3,149.1
+Australian Capital Territory,Reptiles,80,-35.3,149.1
+Australian Capital Territory,Amphibians,37,-35.3,149.1
+New South Wales,Insects,20368,-32,147
+New South Wales,Other animals,8789,-32,147
+New South Wales,Fish,1536,-32,147
+New South Wales,Birds,743,-32,147
+New South Wales,Reptiles,398,-32,147
+New South Wales,Mammals,256,-32,147
+New South Wales,Amphibians,117,-32,147
+Northern Territory,Insects,6392,-19.5,133.5
+Northern Territory,Other animals,3758,-19.5,133.5
+Northern Territory,Fish,826,-19.5,133.5
+Northern Territory,Birds,623,-19.5,133.5
+Northern Territory,Reptiles,491,-19.5,133.5
+Northern Territory,Mammals,234,-19.5,133.5
+Northern Territory,Amphibians,83,-19.5,133.5
+Queensland,Insects,24477,-22.5,144.5
+Queensland,Other animals,12299,-22.5,144.5
+Queensland,Fish,2063,-22.5,144.5
+Queensland,Birds,726,-22.5,144.5
+Queensland,Reptiles,615,-22.5,144.5
+Queensland,Mammals,280,-22.5,144.5
+Queensland,Amphibians,149,-22.5,144.5
+South Australia,Insects,8084,-30,135
+South Australia,Other animals,3946,-30,135
+South Australia,Birds,624,-30,135
+South Australia,Fish,522,-30,135
+South Australia,Reptiles,335,-30,135
+South Australia,Mammals,202,-30,135
+South Australia,Amphibians,35,-30,135
+Tasmania,Insects,6892,-42,146.5
+Tasmania,Other animals,4498,-42,146.5
+Tasmania,Fish,478,-42,146.5
+Tasmania,Birds,420,-42,146.5
+Tasmania,Mammals,112,-42,146.5
+Tasmania,Reptiles,42,-42,146.5
+Tasmania,Amphibians,25,-42,146.5
+Victoria,Insects,13099,-37,144.5
+Victoria,Other animals,4654,-37,144.5
+Victoria,Birds,606,-37,144.5
+Victoria,Fish,550,-37,144.5
+Victoria,Mammals,186,-37,144.5
+Victoria,Reptiles,165,-37,144.5
+Victoria,Amphibians,62,-37,144.5
+Western Australia,Insects,11161,-25,122
+Western Australia,Other animals,8417,-25,122
+Western Australia,Fish,1668,-25,122
+Western Australia,Reptiles,628,-25,122
+Western Australia,Birds,623,-25,122
+Western Australia,Mammals,235,-25,122
+Western Australia,Amphibians,100,-25,122
