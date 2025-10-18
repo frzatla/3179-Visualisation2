@@ -1,5 +1,5 @@
 state,species_count,area_km2,species_per_1k
-Australian Capital Territory,6085,2358.172,2,580.40
+Australian Capital Territory,6085,2358.172,2580.40
 Tasmania,11835,68017.8607,174
 Victoria,18067,227495.6304,79.4
 New South Wales,29739,800810.7823,37.1
@@ -7,4 +7,5 @@ Queensland,38275,1730172.083,22.1
 South Australia,12001,984274.908,12.2
 Western Australia,20946,2526646.239,8.3
 Northern Territory,10570,1348094.328,7.8
+
 
