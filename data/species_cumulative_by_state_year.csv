@@ -1,201 +1,201 @@
-state,year,species_cum
-Queensland,2000,17224
-Queensland,2001,17989
-Queensland,2002,18755
-Queensland,2003,19520
-Queensland,2004,20669
-Queensland,2005,21817
-Queensland,2006,22582
-Queensland,2007,23348
-Queensland,2008,24496
-Queensland,2009,25262
-Queensland,2010,26410
-Queensland,2011,27175
-Queensland,2012,28324
-Queensland,2013,29472
-Queensland,2014,30620
-Queensland,2015,31768
-Queensland,2016,32917
-Queensland,2017,33682
-Queensland,2018,34448
-Queensland,2019,35213
-Queensland,2020,35979
-Queensland,2021,36744
-Queensland,2022,37510
-Queensland,2023,37892
-Queensland,2024,38275
-New South Wales,2000,13383
-New South Wales,2001,13977
-New South Wales,2002,14572
-New South Wales,2003,15167
-New South Wales,2004,16059
-New South Wales,2005,16951
-New South Wales,2006,17546
-New South Wales,2007,18141
-New South Wales,2008,19033
-New South Wales,2009,19628
-New South Wales,2010,20520
-New South Wales,2011,21115
-New South Wales,2012,22007
-New South Wales,2013,22899
-New South Wales,2014,23791
-New South Wales,2015,24683
-New South Wales,2016,25576
-New South Wales,2017,26170
-New South Wales,2018,26765
-New South Wales,2019,27360
-New South Wales,2020,27955
-New South Wales,2021,28549
-New South Wales,2022,29144
-New South Wales,2023,29442
-New South Wales,2024,29739
-Victoria,2000,8127
-Victoria,2001,8489
-Victoria,2002,8850
-Victoria,2003,9211
-Victoria,2004,9753
-Victoria,2005,10295
-Victoria,2006,10656
-Victoria,2007,11017
-Victoria,2008,11559
-Victoria,2009,11920
-Victoria,2010,12462
-Victoria,2011,12823
-Victoria,2012,13365
-Victoria,2013,13907
-Victoria,2014,14449
-Victoria,2015,14991
-Victoria,2016,15532
-Victoria,2017,15894
-Victoria,2018,16255
-Victoria,2019,16616
-Victoria,2020,16977
-Victoria,2021,17339
-Victoria,2022,17700
-Victoria,2023,17880
-Victoria,2024,18061
-Western Australia,2000,9423
-Western Australia,2001,9842
-Western Australia,2002,10261
-Western Australia,2003,10679
-Western Australia,2004,11308
-Western Australia,2005,11936
-Western Australia,2006,12355
-Western Australia,2007,12773
-Western Australia,2008,13402
-Western Australia,2009,13820
-Western Australia,2010,14449
-Western Australia,2011,14867
-Western Australia,2012,15496
-Western Australia,2013,16124
-Western Australia,2014,16752
-Western Australia,2015,17380
-Western Australia,2016,18008
-Western Australia,2017,18427
-Western Australia,2018,18846
-Western Australia,2019,19265
-Western Australia,2020,19684
-Western Australia,2021,20102
-Western Australia,2022,20521
-Western Australia,2023,20731
-Western Australia,2024,20940
-South Australia,2000,5396
-South Australia,2001,5636
-South Australia,2002,5876
-South Australia,2003,6116
-South Australia,2004,6476
-South Australia,2005,6835
-South Australia,2006,7075
-South Australia,2007,7315
-South Australia,2008,7675
-South Australia,2009,7915
-South Australia,2010,8274
-South Australia,2011,8514
-South Australia,2012,8874
-South Australia,2013,9234
-South Australia,2014,9594
-South Australia,2015,9953
-South Australia,2016,10313
-South Australia,2017,10553
-South Australia,2018,10793
-South Australia,2019,11033
-South Australia,2020,11272
-South Australia,2021,11512
-South Australia,2022,11752
-South Australia,2023,11872
-South Australia,2024,11992
-Tasmania,2000,5326
-Tasmania,2001,5562
-Tasmania,2002,5799
-Tasmania,2003,6036
-Tasmania,2004,6391
-Tasmania,2005,6746
-Tasmania,2006,6983
-Tasmania,2007,7219
-Tasmania,2008,7574
-Tasmania,2009,7811
-Tasmania,2010,8166
-Tasmania,2011,8403
-Tasmania,2012,8758
-Tasmania,2013,9113
-Tasmania,2014,9468
-Tasmania,2015,9823
-Tasmania,2016,10178
-Tasmania,2017,10415
-Tasmania,2018,10652
-Tasmania,2019,10888
-Tasmania,2020,11125
-Tasmania,2021,11362
-Tasmania,2022,11598
-Tasmania,2023,11717
-Tasmania,2024,11835
-Northern Territory,2000,4757
-Northern Territory,2001,4968
-Northern Territory,2002,5179
-Northern Territory,2003,5391
-Northern Territory,2004,5708
-Northern Territory,2005,6025
-Northern Territory,2006,6236
-Northern Territory,2007,6448
-Northern Territory,2008,6765
-Northern Territory,2009,6976
-Northern Territory,2010,7293
-Northern Territory,2011,7505
-Northern Territory,2012,7822
-Northern Territory,2013,8139
-Northern Territory,2014,8456
-Northern Territory,2015,8773
-Northern Territory,2016,9090
-Northern Territory,2017,9302
-Northern Territory,2018,9513
-Northern Territory,2019,9724
-Northern Territory,2020,9936
-Northern Territory,2021,10147
-Northern Territory,2022,10359
-Northern Territory,2023,10464
-Northern Territory,2024,10570
-Australian Capital Territory,2000,2738
-Australian Capital Territory,2001,2860
-Australian Capital Territory,2002,2982
-Australian Capital Territory,2003,3103
-Australian Capital Territory,2004,3286
-Australian Capital Territory,2005,3468
-Australian Capital Territory,2006,3590
-Australian Capital Territory,2007,3712
-Australian Capital Territory,2008,3894
-Australian Capital Territory,2009,4016
-Australian Capital Territory,2010,4199
-Australian Capital Territory,2011,4320
-Australian Capital Territory,2012,4503
-Australian Capital Territory,2013,4685
-Australian Capital Territory,2014,4868
-Australian Capital Territory,2015,5051
-Australian Capital Territory,2016,5233
-Australian Capital Territory,2017,5355
-Australian Capital Territory,2018,5477
-Australian Capital Territory,2019,5598
-Australian Capital Territory,2020,5720
-Australian Capital Territory,2021,5842
-Australian Capital Territory,2022,5963
-Australian Capital Territory,2023,6024
-Australian Capital Territory,2024,6085
+state,year,species_cum,latitude,longitude
+Queensland,2000,17224,-22.5,144.5
+Queensland,2001,17989,-22.5,144.5
+Queensland,2002,18755,-22.5,144.5
+Queensland,2003,19520,-22.5,144.5
+Queensland,2004,20669,-22.5,144.5
+Queensland,2005,21817,-22.5,144.5
+Queensland,2006,22582,-22.5,144.5
+Queensland,2007,23348,-22.5,144.5
+Queensland,2008,24496,-22.5,144.5
+Queensland,2009,25262,-22.5,144.5
+Queensland,2010,26410,-22.5,144.5
+Queensland,2011,27175,-22.5,144.5
+Queensland,2012,28324,-22.5,144.5
+Queensland,2013,29472,-22.5,144.5
+Queensland,2014,30620,-22.5,144.5
+Queensland,2015,31768,-22.5,144.5
+Queensland,2016,32917,-22.5,144.5
+Queensland,2017,33682,-22.5,144.5
+Queensland,2018,34448,-22.5,144.5
+Queensland,2019,35213,-22.5,144.5
+Queensland,2020,35979,-22.5,144.5
+Queensland,2021,36744,-22.5,144.5
+Queensland,2022,37510,-22.5,144.5
+Queensland,2023,37892,-22.5,144.5
+Queensland,2024,38275,-22.5,144.5
+New South Wales,2000,13383,-32,147
+New South Wales,2001,13977,-32,147
+New South Wales,2002,14572,-32,147
+New South Wales,2003,15167,-32,147
+New South Wales,2004,16059,-32,147
+New South Wales,2005,16951,-32,147
+New South Wales,2006,17546,-32,147
+New South Wales,2007,18141,-32,147
+New South Wales,2008,19033,-32,147
+New South Wales,2009,19628,-32,147
+New South Wales,2010,20520,-32,147
+New South Wales,2011,21115,-32,147
+New South Wales,2012,22007,-32,147
+New South Wales,2013,22899,-32,147
+New South Wales,2014,23791,-32,147
+New South Wales,2015,24683,-32,147
+New South Wales,2016,25576,-32,147
+New South Wales,2017,26170,-32,147
+New South Wales,2018,26765,-32,147
+New South Wales,2019,27360,-32,147
+New South Wales,2020,27955,-32,147
+New South Wales,2021,28549,-32,147
+New South Wales,2022,29144,-32,147
+New South Wales,2023,29442,-32,147
+New South Wales,2024,29739,-32,147
+Victoria,2000,8127,-37,144.5
+Victoria,2001,8489,-37,144.5
+Victoria,2002,8850,-37,144.5
+Victoria,2003,9211,-37,144.5
+Victoria,2004,9753,-37,144.5
+Victoria,2005,10295,-37,144.5
+Victoria,2006,10656,-37,144.5
+Victoria,2007,11017,-37,144.5
+Victoria,2008,11559,-37,144.5
+Victoria,2009,11920,-37,144.5
+Victoria,2010,12462,-37,144.5
+Victoria,2011,12823,-37,144.5
+Victoria,2012,13365,-37,144.5
+Victoria,2013,13907,-37,144.5
+Victoria,2014,14449,-37,144.5
+Victoria,2015,14991,-37,144.5
+Victoria,2016,15532,-37,144.5
+Victoria,2017,15894,-37,144.5
+Victoria,2018,16255,-37,144.5
+Victoria,2019,16616,-37,144.5
+Victoria,2020,16977,-37,144.5
+Victoria,2021,17339,-37,144.5
+Victoria,2022,17700,-37,144.5
+Victoria,2023,17880,-37,144.5
+Victoria,2024,18061,-37,144.5
+Western Australia,2000,9423,-25,122
+Western Australia,2001,9842,-25,122
+Western Australia,2002,10261,-25,122
+Western Australia,2003,10679,-25,122
+Western Australia,2004,11308,-25,122
+Western Australia,2005,11936,-25,122
+Western Australia,2006,12355,-25,122
+Western Australia,2007,12773,-25,122
+Western Australia,2008,13402,-25,122
+Western Australia,2009,13820,-25,122
+Western Australia,2010,14449,-25,122
+Western Australia,2011,14867,-25,122
+Western Australia,2012,15496,-25,122
+Western Australia,2013,16124,-25,122
+Western Australia,2014,16752,-25,122
+Western Australia,2015,17380,-25,122
+Western Australia,2016,18008,-25,122
+Western Australia,2017,18427,-25,122
+Western Australia,2018,18846,-25,122
+Western Australia,2019,19265,-25,122
+Western Australia,2020,19684,-25,122
+Western Australia,2021,20102,-25,122
+Western Australia,2022,20521,-25,122
+Western Australia,2023,20731,-25,122
+Western Australia,2024,20940,-25,122
+South Australia,2000,5396,-30,135
+South Australia,2001,5636,-30,135
+South Australia,2002,5876,-30,135
+South Australia,2003,6116,-30,135
+South Australia,2004,6476,-30,135
+South Australia,2005,6835,-30,135
+South Australia,2006,7075,-30,135
+South Australia,2007,7315,-30,135
+South Australia,2008,7675,-30,135
+South Australia,2009,7915,-30,135
+South Australia,2010,8274,-30,135
+South Australia,2011,8514,-30,135
+South Australia,2012,8874,-30,135
+South Australia,2013,9234,-30,135
+South Australia,2014,9594,-30,135
+South Australia,2015,9953,-30,135
+South Australia,2016,10313,-30,135
+South Australia,2017,10553,-30,135
+South Australia,2018,10793,-30,135
+South Australia,2019,11033,-30,135
+South Australia,2020,11272,-30,135
+South Australia,2021,11512,-30,135
+South Australia,2022,11752,-30,135
+South Australia,2023,11872,-30,135
+South Australia,2024,11992,-30,135
+Tasmania,2000,5326,-42,146.5
+Tasmania,2001,5562,-42,146.5
+Tasmania,2002,5799,-42,146.5
+Tasmania,2003,6036,-42,146.5
+Tasmania,2004,6391,-42,146.5
+Tasmania,2005,6746,-42,146.5
+Tasmania,2006,6983,-42,146.5
+Tasmania,2007,7219,-42,146.5
+Tasmania,2008,7574,-42,146.5
+Tasmania,2009,7811,-42,146.5
+Tasmania,2010,8166,-42,146.5
+Tasmania,2011,8403,-42,146.5
+Tasmania,2012,8758,-42,146.5
+Tasmania,2013,9113,-42,146.5
+Tasmania,2014,9468,-42,146.5
+Tasmania,2015,9823,-42,146.5
+Tasmania,2016,10178,-42,146.5
+Tasmania,2017,10415,-42,146.5
+Tasmania,2018,10652,-42,146.5
+Tasmania,2019,10888,-42,146.5
+Tasmania,2020,11125,-42,146.5
+Tasmania,2021,11362,-42,146.5
+Tasmania,2022,11598,-42,146.5
+Tasmania,2023,11717,-42,146.5
+Tasmania,2024,11835,-42,146.5
+Northern Territory,2000,4757,-19.5,133.5
+Northern Territory,2001,4968,-19.5,133.5
+Northern Territory,2002,5179,-19.5,133.5
+Northern Territory,2003,5391,-19.5,133.5
+Northern Territory,2004,5708,-19.5,133.5
+Northern Territory,2005,6025,-19.5,133.5
+Northern Territory,2006,6236,-19.5,133.5
+Northern Territory,2007,6448,-19.5,133.5
+Northern Territory,2008,6765,-19.5,133.5
+Northern Territory,2009,6976,-19.5,133.5
+Northern Territory,2010,7293,-19.5,133.5
+Northern Territory,2011,7505,-19.5,133.5
+Northern Territory,2012,7822,-19.5,133.5
+Northern Territory,2013,8139,-19.5,133.5
+Northern Territory,2014,8456,-19.5,133.5
+Northern Territory,2015,8773,-19.5,133.5
+Northern Territory,2016,9090,-19.5,133.5
+Northern Territory,2017,9302,-19.5,133.5
+Northern Territory,2018,9513,-19.5,133.5
+Northern Territory,2019,9724,-19.5,133.5
+Northern Territory,2020,9936,-19.5,133.5
+Northern Territory,2021,10147,-19.5,133.5
+Northern Territory,2022,10359,-19.5,133.5
+Northern Territory,2023,10464,-19.5,133.5
+Northern Territory,2024,10570,-19.5,133.5
+Australian Capital Territory,2000,2738,-35.3,149.1
+Australian Capital Territory,2001,2860,-35.3,149.1
+Australian Capital Territory,2002,2982,-35.3,149.1
+Australian Capital Territory,2003,3103,-35.3,149.1
+Australian Capital Territory,2004,3286,-35.3,149.1
+Australian Capital Territory,2005,3468,-35.3,149.1
+Australian Capital Territory,2006,3590,-35.3,149.1
+Australian Capital Territory,2007,3712,-35.3,149.1
+Australian Capital Territory,2008,3894,-35.3,149.1
+Australian Capital Territory,2009,4016,-35.3,149.1
+Australian Capital Territory,2010,4199,-35.3,149.1
+Australian Capital Territory,2011,4320,-35.3,149.1
+Australian Capital Territory,2012,4503,-35.3,149.1
+Australian Capital Territory,2013,4685,-35.3,149.1
+Australian Capital Territory,2014,4868,-35.3,149.1
+Australian Capital Territory,2015,5051,-35.3,149.1
+Australian Capital Territory,2016,5233,-35.3,149.1
+Australian Capital Territory,2017,5355,-35.3,149.1
+Australian Capital Territory,2018,5477,-35.3,149.1
+Australian Capital Territory,2019,5598,-35.3,149.1
+Australian Capital Territory,2020,5720,-35.3,149.1
+Australian Capital Territory,2021,5842,-35.3,149.1
+Australian Capital Territory,2022,5963,-35.3,149.1
+Australian Capital Territory,2023,6024,-35.3,149.1
+Australian Capital Territory,2024,6085,-35.3,149.1
