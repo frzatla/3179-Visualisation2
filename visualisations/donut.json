@@ -1,156 +1,79 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": "container",
-    "height": 250,
-    "title": "Wildlife Species Distribution by Group",
-    "data": {
-      "url": "https://raw.githubusercontent.com/frzatla/3179-Visualisation2/main/data/richness_by_class_state.csv"
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 350,
+  "height": 275,
+  "title": "Wildlife Species Distribution by Group",
+  "data": {
+    "url": "https://raw.githubusercontent.com/frzatla/3179-Visualisation2/main/data/withcum_species_by_state_year_group.csv"
+  },
+  "params": [
+    {
+      "name": "State_selection",
+      "value": "New South Wales",
+      "bind": {
+        "input": "select",
+        "options": [
+          "New South Wales","Victoria","Queensland","South Australia",
+          "Western Australia","Tasmania","Northern Territory","Australian Capital Territory"
+        ],
+        "labels": [
+          "New South Wales","Victoria","Queensland","South Australia",
+          "Western Australia","Tasmania","Northern Territory","Australian Capital Territory"
+        ],
+        "name": "Select State: "
+      }
     },
-    "params": [
-      {
-        "name": "State_selection",
-        "value": "New South Wales",
-        "bind": {
-          "input": "select",
-          "options": [
-            "New South Wales",
-            "Victoria",
-            "Queensland",
-            "South Australia",
-            "Western Australia",
-            "Tasmania",
-            "Northern Territory",
-            "Australian Capital Territory"
-          ],
-          "labels": [
-            "New South Wales",
-            "Victoria",
-            "Queensland",
-            "South Australia",
-            "Western Australia",
-            "Tasmania",
-            "Northern Territory",
-            "Australian Capital Territory"
-          ],
-          "name": "Select State: "
-        }
+    {
+      "name": "Year_selection",
+      "value": 2024,
+      "bind": {
+        "input": "select",
+        "options": [2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024],
+        "labels": ["2000","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024"],
+        "name": "Year: "
       }
-    ],
-    "transform": [
-      {
-        "filter": "datum.state == State_selection"
-      },
-      {
-        "calculate": "datum.species_count",
-        "as": "Species Count"
-      }
-    ],
-    "layer": [
-      {
-        "mark": {
-          "type": "arc",
-          "innerRadius": 50,
-          "outerRadius": 100
-        },
-        "encoding": {
-          "theta": {
-            "field": "species_count",
-            "type": "quantitative",
-            "stack": true
-          },
-          "color": {
-            "field": "group",
-            "type": "nominal",
-            "scale": {
-              "domain": [
-                "Birds",
-                "Insects",
-                "Mammals",
-                "Reptiles",
-                "Amphibians",
-                "Fish",
-                "Other animals"
-              ],
-              "range": [
-                "#1f77b4",
-                "#ff7f0e",
-                "#2ca02c",
-                "#d62728",
-                "#9467bd",
-                "#8c564b",
-                "#e377c2"
-              ]
-            },
-            "legend": {
-              "title": "Animal Group",
-              "orient": "right"
-            }
-          },
-          "opacity": {
-            "value": 0.8
-          },
-          "tooltip": [
-            {
-              "field": "state",
-              "type": "nominal",
-              "title": "State"
-            },
-            {
-              "field": "group",
-              "type": "nominal",
-              "title": "Animal Group"
-            },
-            {
-              "field": "species_count",
-              "type": "quantitative",
-              "title": "Species Count",
-              "format": ","
-            }
-          ]
-        }
-      },
-      {
-        "mark": {
-          "type": "text",
-          "align": "center",
-          "baseline": "middle",
-          "dx": 0,
-          "dy": -10,
-          "fontSize": 16,
-          "fontWeight": "bold"
-        },
-        "encoding": {
-          "text": {
-            "aggregate": "sum",
-            "field": "species_count",
-            "type": "quantitative",
-            "format": ","
-          },
-          "color": {
-            "value": "#333"
-          }
-        }
-      },
-      {
-        "mark": {
-          "type": "text",
-          "align": "center",
-          "baseline": "middle",
-          "dx": 0,
-          "dy": 10,
-          "fontSize": 12
-        },
-        "encoding": {
-          "text": {
-            "value": "Total Species"
-          },
-          "color": {
-            "value": "#666"
-          }
-        }
-      }
-    ],
-    "config": {
-      "background": "#F5F1E8"
     }
-  }
+  ],
+  "transform": [
+    { "filter": "datum.state == State_selection && datum.year == Year_selection" },
+    { "joinaggregate": [{"op":"sum","field":"species_cum","as":"state_year_total"}], "groupby": ["state","year"] },
+    { "calculate": "datum.species_cum / datum.state_year_total", "as": "share" }
+  ],
+  "layer": [
+    {
+      "mark": { "type": "arc", "innerRadius": 50, "outerRadius": 100 },
+      "encoding": {
+        "theta": { "field": "species_cum", "type": "quantitative", "stack": true },
+        "color": {
+          "field": "group",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Birds","Insects","Mammals","Reptiles","Amphibians","Fish","Other animals"],
+            "range": ["#1f77b4","#ff7f0e","#2ca02c","#d62728","#9467bd","#8c564b","#e377c2"]
+          },
+          "legend": { "title": "Species Group", "orient": "right" }
+        },
+        "opacity": { "value": 0.8 },
+        "tooltip": [
+          { "field": "state", "type": "nominal", "title": "State" },
+          { "field": "year", "type": "quantitative", "title": "Year" },
+          { "field": "group", "type": "nominal", "title": "Animal Group" },
+          { "field": "species_cum", "type": "quantitative", "title": "Species Count", "format": "," },
+          { "field": "share", "type": "quantitative", "title": "Share of Total", "format": ".1%" }
+        ]
+      }
+    },
+    {
+      "mark": { "type": "text", "align": "center", "baseline": "middle", "dx": 0, "dy": -10, "fontSize": 16, "fontWeight": "bold" },
+      "encoding": {
+        "text": { "aggregate": "sum", "field": "species_cum", "type": "quantitative", "format": "," },
+        "color": { "value": "#333" }
+      }
+    },
+    {
+      "mark": { "type": "text", "align": "center", "baseline": "middle", "dx": 0, "dy": 10, "fontSize": 12 },
+      "encoding": { "text": { "value": "Total Species" }, "color": { "value": "#666" } }
+    }
+  ],
+  "config": { "background": "#F5F1E8" }
+}
