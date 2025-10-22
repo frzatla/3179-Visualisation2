@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title> Visualisation 2 </title>
+  <title>Visualisation 2</title>
   
   <!-- For Vega & Vega-lite-->
   <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
@@ -15,7 +15,7 @@
     integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- For CSS-->
+  <!-- For the CSS-->
   <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
 </head>
 
@@ -23,89 +23,141 @@
 
   <div class="page">  
 
-    <!-- pure grid group -->
-    <div class="pure-g" >
-      <div class="pure-u-1-1">
-        <h1> Wildlife in Australia </h1>
-        <p> Exploring animal species richness and distribution across Australian states. </p>
-      </div>
-    </div>
-    <!-- end pure grid group -->
-
-    <!-- For the map-->
-    <!-- pure grid group -->
+    <!-- Header -->
     <div class="pure-g">
-      <div class="pure-u-3-5">
-        <div id="vis1" class="vis-container"></div>
-      </div>
-    <div class="pure-u-2-5" style="z-index: 10; height: fit-content;">
-      <h2>Animal Species Count per State in Australia </h2>
-      <p style="text-align: left; font-size: 17px;">
-        Australia is one of the worlds most diverse hotspots. About 87% of its mammals, 93% of reptiles and 94% of frogs, plus about 45% of birds, are found nowhere else on Earth. 
-        <br> (Animals | NSW State of the Environment, 2021). </p>
-
-        <p style="text-align: left; font-size: 15px;"> 
-          Queensland stands out in our data as the most biodiverse state, with 38,268 distinct animal species recorded. Queensland holds around 70% of Australia’s mammals and 80% of its native birds, 
-          and more than half of its reptiles, frogs and plants, making it widely described as the nation’s most naturally diverse state.
-        <br>(Biodiscovery in Queensland | Business Queensland, 2020)</p>
-        
-        <p style="text-align: left; font-size: 13px; padding-left: 30px;""> 
-          Following Queensland, New South Wales and Western Australia emerge as the next richest states in our data, with about 29,739 and 20,946 distinct animal species recorded respectively. 
-        <br><br>These figures reflect NSW’s spread from alpine ranges to temperate forests and coasts, and WA’s vast deserts, tropical north and globally significant southwest hotspot.</p>
-    </div>
-  </div>
-    <!-- end pure grid group -->
-
-
-     <!-- Section heading for charts below -->
-     <div class="pure-g">
       <div class="pure-u-1-1">
-        <h2 style="margin-top: 40px;">Species Discovery Trends and Group Distribution</h2>
-        <p style="font-size: 15px; margin-bottom: 30px;">
-          The line chart reveals a remarkable upward trend in species discoveries from 2000 to 2024, with Queensland and New South Wales leading in both volume and growth rate. This acceleration reflects advances in biodiversity research methods, increased survey efforts, and improved taxonomic documentation. The donut chart complements this by showing that insects comprise the vast majority of documented species, followed by other invertebrates and birds. Together, these visualizations highlight both the pace of ongoing biodiversity discovery in Australia and the taxonomic groups driving these numbers, with invertebrates representing the frontier of unexplored diversity.
-    </p>
+        <h1>Wildlife in Australia</h1>
+        <p>Exploring animal species richness and distribution across Australian states.
+        <br> by Firza Pradipta Atalla (33989591) </p>
         </p>
       </div>
     </div>
 
-    <!-- For the line chart-->
-    <!-- pure grid group -->
+    <!-- Map section with text on top -->
     <div class="pure-g">
-      <div class="pure-u-3-5">
+      <!-- Text on top, full width -->
+      <div class="pure-u-1-1">
+        <div class="text-section">
+          <h2>Animal Species Count per State in Australia</h2>
+          <p class="large-text">
+            Australia is one of the world's most diverse hotspots. About 87% of its mammals, 93% of reptiles and 94% of frogs, plus about 45% of birds, are found nowhere else on Earth. 
+            (Animals | NSW State of the Environment, 2021)
+          </p>
+
+          <p class="medium-text"> 
+            Queensland stands out in our data as the most biodiverse state, with 38,275 distinct animal species recorded as of 2024. Queensland holds around 70% of Australia's mammals and 80% of its native birds, and more than half of its reptiles, frogs and plants, making it widely described as the nation's most naturally diverse state.
+            (Biodiscovery in Queensland | Business Queensland, 2020). Following Queensland, New South Wales and Western Australia emerge as the next richest states in our data, with about 29,739 and 20,946 distinct animal species recorded respectively. 
+            These figures reflect NSW's spread from alpine ranges to temperate forests and coasts, and WA's vast deserts, tropical north and globally significant southwest hotspot.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Map interpretation notes -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <div class="map-notes">
+          <strong>Total Species Count & Species Density per 1000 km²</strong> — The map shades each state by species density (species per 1000 km²). The circles show cumulative species count for each state in the selected year. Use the slider to explore how species discovery has grown over time.
+        </div>
+      </div>
+    </div>
+
+    <!-- Map below text -->
+    <div class="pure-g map grid">
+      <div class="pure-u-1-1">
+        <div id="vis1" class="vis-container"></div>
+      </div>
+    </div>
+
+    <!-- Section heading for charts -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <h2>Species Discovery Trends and Group Distribution</h2>
+        <p class="section-description">
+          The line chart reveals a remarkable upward trend in species discoveries from 2000 to 2024, with Queensland and New South Wales leading in both volume and growth rate. This acceleration reflects advances in biodiversity research methods, increased survey efforts, and improved taxonomic documentation. The donut chart complements this by showing that insects comprise the vast majority of documented species, followed by other invertebrates and birds. Together, these visualizations highlight both the pace of ongoing biodiversity discovery in Australia and the taxonomic groups driving these numbers, with invertebrates representing the frontier of unexplored diversity.
+        </p>
+      </div>
+    </div>
+
+    <!-- Charts side by side with green notes -->
+    <div class="pure-g">
+      <!-- Line chart section -->
+      <div class="pure-u-1-2">
+        <div class="chart-notes">
+          <strong>Species Discovered Per Year</strong> — This chart shows temporal trends in wildlife species discovery across Australian states. Use the dropdown to filter by specific states or view all states together.
+        </div>
         <div id="vis3" class="vis-container"></div>
       </div>
-      <!-- For the donut chart-->
-      <div class="pure-u-2-5">
+      
+      <!-- Donut chart section -->
+      <div class="pure-u-1-2">
+        <div class="chart-notes donut-chart-notes">
+          <strong>Wildlife Species Distribution by Group</strong> — This donut chart displays the proportional breakdown of species across major animal groups. Select different states to compare their biodiversity composition.
+        </div>
         <div id="vis2" class="vis-container"></div>
       </div>
     </div>
-    <!-- end pure grid group -->
 
-
+    <!-- Threat status paragraph-->
     <div class="pure-g">
-      <div class="pure-u-1-1 small-font">
-        <p> Planning on adding more charts below. </p>
+      <div class="pure-u-1-1">
+        <h2>Threat Status and Public Awareness</h2>
+        <p class="section-description">
+          The 100% stacked bars show that <em>Endangered</em> and <em>Critically Endangered</em> categories
+          account for a large share of threatened species across several groups. The small but non-zero
+          presence of <em>Extinct</em> and <em>Extinct in the wild</em> segments highlights that losses have
+          already occurred. The green sliver, <em>Conservation Dependent</em>, reminds us that some species
+          survive only with ongoing management. Paired with the popularity ranking on the right, this section
+          helps identify high-risk species that may receive less public attention—areas where awareness,
+          funding and targeted conservation could have outsized impact.
+        </p>
+      </div>
+    </div>
+
+      <!-- Stacked bar chart section -->
+    <div class="pure-g">
+      <div class="pure-u-1-2">
+        <div class="chart-notes stacked-chart-notes">
+          <strong>Threatened Species by Group and Status (100% Stacked)</strong> — This chart shows the
+          proportional breakdown of conservation statuses within each animal group. Bars are normalized to 100%,
+          so you can compare the mix across groups regardless of total size.
+        </div>
+        <div id="vis4" class="vis-container"></div>
+      </div>
+    <!-- Wikipedia popularity ranking -->
+    <div class="pure-u-1-2">
+      <div class="chart-notes">
+        <strong>Endangered Species — Wikipedia Popularity (2024)</strong> — Ranked horizontal bars by estimated
+        2024 Wikipedia pageviews. Hover to see scientific names, conservation status, records and states present.
+      </div>
+      <div id="vis5" class="vis-container"></div>
+    </div>
+  </div>
+
+
+    <!-- Footer -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <p class="small-font"> Data sources:</p>
       </div>
     </div>
 
   </div> 
 
   <script type="text/javascript">
-  var specVis1 = "visualisations/map.json";
-  
-  var specVis2 = "visualisations/donut.json";
+    var specVis1 = "visualisations/map.json";
+    var specVis2 = "visualisations/donut.json";
+    var specVis3 = "visualisations/line.json";
+    var specVis4 = "visualisations/stacked.json";
+    var specVis5 = "visualisations/horizontalbar.json";
 
-  var specVis3 = "visualisations/line.json";
+    vegaEmbed('#vis1', specVis1, { "actions": false }).catch(console.error);
+    vegaEmbed('#vis2', specVis2, { "actions": false }).catch(console.error);
+    vegaEmbed('#vis3', specVis3, { "actions": false }).catch(console.error);
+    vegaEmbed('#vis4', specVis4, { "actions": false }).catch(console.error);
+    vegaEmbed('#vis5', specVis5, { "actions": false }).catch(console.error);
+  </script>
 
-  vegaEmbed('#vis1', specVis1, { "actions": false }).then(function (result) {
-  }).catch(console.error);
-
-  vegaEmbed('#vis2', specVis2, { "actions": false }).then(function (result) {
-  }).catch(console.error);
-
-  vegaEmbed('#vis3', specVis3, { "actions": false }).then(function (result) {
-  }).catch(console.error);
-</script>
 </body>
 
 </html>
