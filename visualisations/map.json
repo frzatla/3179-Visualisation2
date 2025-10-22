@@ -1,138 +1,142 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Total Species Count & Species Density per 1000 km²",
+    "fontSize": 19,
+    "fontWeight": "bold",
+    "anchor": "start",
+    "offset": 10
+  },
   "width": 750,
-  "height": 500,
-  "padding": {
-    "left": 10,
-    "right": 100,
-    "top": 0,
-    "bottom": 100
-  },
+  "height": 600,
   "projection": {
-    "type": "equirectangular"
+    "type": "mercator",
+    "center": [131, -28],
+    "scale": 900
   },
+  "params": [
+  {
+    "name": "year_selection",
+    "value": 2024,
+    "bind": {
+      "input": "range",
+      "min": 2000,
+      "max": 2024,
+      "step": 1,
+      "name": "Year:"
+    }
+  }
+],
+
+  "resolve": { "scale": { "fill": "independent" } },
+
   "layer": [
     {
       "data": {
         "url": "https://raw.githubusercontent.com/frzatla/3179-Visualisation2/main/data/aus-states.json",
-        "format": {
-          "type": "topojson",
-          "feature": "STE_2016_AUST"
-        }
+        "format": { "type": "topojson", "feature": "STE_2016_AUST" }
       },
-      "mark": {
-        "type": "geoshape",
-        "fill": "lightgray",
-        "stroke": "white"
+      "transform": [
+        {
+          "lookup": "properties.STATE_NAME",
+          "from": {
+            "data": { "url": "https://raw.githubusercontent.com/frzatla/3179-Visualisation2/main/data/wildlife_species_density_by_state.csv" },
+            "key": "state",
+            "fields": ["species_per_1k"]
+          }
+        }
+      ],
+      "mark": { "type": "geoshape", "stroke": "white", "strokeWidth": 1.5 },
+      "encoding": {
+        "fill": {
+          "field": "species_per_1k",
+          "type": "quantitative",
+          "title": "Species per 1000 km²",
+          "scale": { "type": "log", "scheme": "browns", "domain": [7, 2600] },
+          "legend": {
+            "orient": "none",
+            "direction": "vertical",
+            "gradientLength": 90,
+            "gradientThickness": 20,
+            "titleFontSize": 10,
+            "labelFontSize": 9,
+            "offset": -100,
+            "padding": 10,
+            "legendX": 800,
+            "legendY": 20
+          }
+        },
+        "tooltip": [
+          { "field": "properties.STATE_NAME", "type": "nominal", "title": "State" },
+          { "field": "species_per_1k", "type": "quantitative", "title": "Species per 1000 km²", "format": ".1f" }
+        ]
       }
     },
+
     {
-      "data": {
-        "url": "https://raw.githubusercontent.com/frzatla/3179-Visualisation2/main/data/wildlife_species_counts_by_state.csv"
-      },
+      "data": { "url": "https://raw.githubusercontent.com/frzatla/3179-Visualisation2/main/data/species_cumulative_by_state_year.csv" },
+      "transform": [ { "filter": "datum.year == year_selection" } ],
       "mark": {
-        "type": "circle"
+        "type": "circle",
+        "opacity": 0.85,
+        "stroke": "white",
+        "strokeWidth": 1
       },
       "encoding": {
-        "longitude": {
-          "field": "longitude",
-          "type": "quantitative"
-        },
-        "latitude": {
-          "field": "latitude",
-          "type": "quantitative"
-        },
+        "longitude": { "field": "longitude", "type": "quantitative" },
+        "latitude": { "field": "latitude", "type": "quantitative" },
         "size": {
-          "field": "species_count",
+          "field": "species_cum",
           "type": "quantitative",
-          "title": "Quantity",
-          "scale": {
-            "domain": [
-              0,
-              40000
-            ],
-            "range": [
-              0,
-              4000
-            ]
-          },
+          "title": "Cumulative Species Count",
+          "scale": { "domain": [0, 40000], "range": [0, 4000] },
           "legend": {
             "orient": "none",
             "direction": "vertical",
             "offset": -100,
             "padding": 10,
-            "values": [
-              40000,
-              30000,
-              20000,
-              10000,
-              0
-            ],
+            "values": [40000, 30000, 20000, 10000, 0],
             "labelFormat": ",",
             "labelAlign": "left",
             "labelBaseline": "middle",
             "labelOffset": 10,
             "rowPadding": 0,
             "symbolType": "circle",
-            "symbolFillColor": "gray",
+            "symbolFillColor": "#2ca02c",
             "symbolStrokeColor": "#ccc",
             "symbolStrokeWidth": 1.5,
-            "symbolOpacity": 0.5,
+            "symbolOpacity": 0.8,
             "titlePadding": 10,
             "legendX": -115,
-            "legendY": 50
+            "legendY": 300
           }
         },
-        "color": {
-          "field": "species_count",
+        "fill": {
+          "field": "species_cum",
           "type": "quantitative",
-          "title": "Distinct species count",
-          "scale": {
-            "scheme": "greens"
-          },
+          "title": "Cumulative Species Count",
+          "scale": { "scheme": "greens", "domain": [0, 40000] },
           "legend": {
-            "padding": 10,
-            "offset": -100,
-            "orient": "top-left",
+            "orient": "none",
             "direction": "vertical",
-            "labelFontSize": 10,
-            "titleFontSize": 12,
-            "gradientLength": 110,
-            "gradientThickness": 20
+            "offset": -100,
+            "padding": 10,
+            "labelAlign": "left",
+            "labelBaseline": "middle",
+            "labelOffset": 10,
+            "rowPadding": 0,
+            "titlePadding": 10,
+            "legendX": -100,
+            "legendY": 20
           }
         },
         "tooltip": [
-          {
-            "field": "state",
-            "type": "nominal",
-            "title": "State:"
-          },
-          {
-            "field": "species_count",
-            "type": "quantitative",
-            "title": "Species Count:",
-            "format": ","
-          },
-          {
-            "field": "latitude",
-            "type": "quantitative",
-            "title": "Latitude:",
-            "format": ".1f"
-          },
-          {
-            "field": "longitude",
-            "type": "quantitative",
-            "title": "Longitude:",
-            "format": ".1f"
-          }
+          { "field": "state", "type": "nominal", "title": "State" },
+          { "field": "year", "type": "quantitative", "title": "Year" },
+          { "field": "species_cum", "type": "quantitative", "title": "Cumulative Species Count", "format": "," }
         ]
       }
     }
   ],
-  "config": {
-    "view": {
-      "stroke": null
-    },
-    "background": "#F5F1E8"
-  }
+  "config": { "view": { "stroke": null }, "background": "#F5F1E8" }
 }
