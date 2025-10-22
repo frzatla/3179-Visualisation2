@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": "container",
-    "height": 200,
+    "width": 360,
+    "height": 228,
     "title": {
       "text": "Species Discovered Per Year",
       "subtitle": "Temporal trends in wildlife species discovery across Australian states"
@@ -96,7 +96,8 @@
         },
         "legend": {
           "title": "State",
-          "orient": "right"
+          "orient": "right",
+          "offset": 10
         }
       },
       "tooltip": [
