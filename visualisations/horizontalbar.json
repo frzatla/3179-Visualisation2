@@ -1,0 +1,55 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+      "text": "Popular Endangered Australian Animal Species",
+      "fontSize": 18,
+      "fontWeight": "bold",
+      "anchor": "middle"
+    },
+    "width": 220,
+    "height": 220,
+    "data": {
+      "url": "https://raw.githubusercontent.com/frzatla/3179-Visualisation2/main/data/endangered_top.csv"
+    },
+  
+    "mark": {"type": "bar", "cornerRadiusEnd": 3},
+  
+    "encoding": {
+      "y": {
+        "field": "common_name",
+        "type": "nominal",
+        "sort": "-x",
+        "title": "Species"
+      },
+      "x": {
+        "field": "wiki_pageviews_2024",
+        "type": "quantitative",
+        "title": "Wikipedia pageviews (2024)",
+        "axis": {
+          "format": ".2s",
+          "labelExpr": "replace(datum.label, 'M', 'm')"  
+        }
+      },
+      "color": {
+        "field": "common_name",
+        "type": "nominal",
+        "legend": null,
+        "scale": {"scheme": "tableau10"}
+      },
+      "tooltip": [
+        {"field": "common_name", "type": "nominal", "title": "Common name"},
+        {"field": "scientific_name", "type": "nominal", "title": "Scientific name"},
+        {"field": "group", "type": "nominal", "title": "Group"},
+        {"field": "status", "type": "nominal", "title": "Status"},
+        {"field": "wiki_pageviews_2024", "type": "quantitative", "title": "Wiki pageviews (2024)", "format": ","},
+        {"field": "record_count", "type": "quantitative", "title": "Records", "format": ","},
+        {"field": "states_present", "type": "quantitative", "title": "States present"}
+      ]
+    },
+  
+    "config": {
+      "background": "#F5F1E8",
+      "view": {"stroke": null},
+      "axis": {"grid": true, "labelFontSize": 12, "titleFontSize": 12}
+    }
+  }
