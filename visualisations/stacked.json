@@ -1,0 +1,71 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Threatened Species by Group and Status (100% Stacked)",
+    "fontSize": 18,
+    "fontWeight": "bold",
+    "anchor": "middle"
+  },
+  "width": 350,
+  "height": 220,
+  "data": {
+    "url": "https://raw.githubusercontent.com/frzatla/3179-Visualisation2/main/data/threat_mix_by_group.csv"
+  },
+
+  "transform": [
+    { "calculate": "datum.group == 'Other animals' ? 'ZOther animals' : datum.group", "as": "group_sort" },
+    { "aggregate": [{"op":"sum","field":"count","as":"count"}], "groupby": ["group","status"] },
+    { "joinaggregate": [{"op":"sum","field":"count","as":"group_total"}], "groupby": ["group"] },
+    { "calculate": "datum.count / datum.group_total", "as": "share" },
+    {
+      "calculate": "datum.status === 'Conservation Dependent' ? 1 : datum.status === 'Extinct' ? 2 : datum.status === 'Extinct in the wild' ? 3 : datum.status === 'Vulnerable' ? 4 : datum.status === 'Endangered' ? 5 : 6",
+      "as": "status_rank"
+    }
+  ],
+
+  "mark": {"type": "bar"},
+  "encoding": {
+    "x": {
+      "field": "group",
+      "type": "nominal",
+      "sort": {"field": "group_sort", "op": "min", "order": "ascending"},
+      "title": "Animal Group",
+      "axis": {"labelAngle": 0}
+    },
+    "y": {
+      "aggregate": "sum",
+      "field": "count",
+      "type": "quantitative",
+      "stack": "normalize",
+      "title": "Share within Group",
+      "axis": {"format": ".0%"}
+    },
+    "color": {
+      "field": "status",
+      "type": "nominal",
+      "title": "Conservation Status",
+      "scale": {
+        "domain": [
+          "Critically Endangered","Endangered","Vulnerable",
+          "Extinct in the wild","Extinct","Conservation Dependent"
+        ],
+        "range": ["#ff0f0f","#FF8C00","#FFD700","#808080","#000000","#32CD32"]
+      },
+      "legend": {"orient": "right"}
+    },
+    "tooltip": [
+      {"field": "group", "type": "nominal", "title": "Group:"},
+      {"field": "status", "type": "nominal", "title": "Status:"},
+      {"aggregate": "sum", "field": "count", "type": "quantitative", "title": "Count:"},
+      {"field": "share", "type": "quantitative", "title": "Share:", "format": ".0%"}
+    ],
+  
+    "order": { "field": "status_rank", "type": "quantitative", "sort": "ascending" }
+  },
+
+  "config": {
+    "view": {"stroke": null},
+    "background": "#F5F1E8",
+    "axis": {"grid": true}
+  }
+}
