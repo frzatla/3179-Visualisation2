@@ -4,7 +4,10 @@
     "height": 228,
     "title": {
       "text": "Species Discovered Per Year",
-      "subtitle": "Temporal trends in wildlife species discovery across Australian states"
+      "subtitle": "Temporal trends in wildlife species discovery across Australian states",
+      "fontSize": 18, 
+      "fontWeight": "bold",
+      "anchor": "middle"
     },
     "data": {
       "url": "https://raw.githubusercontent.com/frzatla/3179-Visualisation2/main/data/wildlife_species_counts_by_state_year.csv"
