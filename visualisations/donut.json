@@ -1,8 +1,13 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 350,
-  "height": 275,
-  "title": "Wildlife Species Distribution by Group",
+  "width": 360,
+  "height": 260,
+  "title": {
+    "text": "Wildlife Species Distribution by Group",
+    "fontSize": 18, 
+    "fontWeight": "bold", 
+    "anchor": "middle"
+  },
   "data": {
     "url": "https://raw.githubusercontent.com/frzatla/3179-Visualisation2/main/data/withcum_species_by_state_year_group.csv"
   },
@@ -49,7 +54,7 @@
           "type": "nominal",
           "scale": {
             "domain": ["Birds","Insects","Mammals","Reptiles","Amphibians","Fish","Other animals"],
-            "range": ["#1f77b4","#ff7f0e","#2ca02c","#d62728","#9467bd","#8c564b","#e377c2"]
+            "range": ["#c0affb","#56641a","#e6a176","#00678a","#984464","#5eccab","#cdcdcd"]
           },
           "legend": { "title": "Species Group", "orient": "right" }
         },
