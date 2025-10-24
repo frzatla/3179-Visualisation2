@@ -27,6 +27,38 @@ p {
   margin-bottom: 30px;
 }
 
+.header-wrap{
+  background: transparent;         
+  padding: 32px 0 24px;            
+  margin-top: -20px;
+  margin-bottom: -30px;
+}
+
+.header-grid{
+  background: #E8C995;              
+  width: min(1150px, 95vw);         
+  margin: 0 auto;                   
+  border-radius: 20px;
+  padding: 36px 28px;               
+  text-align: center;
+  color: #111;
+  box-shadow: 0 1px 0 rgba(0,0,0,.06); 
+}
+
+.header-grid h1{
+  margin: 0 0 12px;
+  font-size: clamp(28px, 5vw, 56px); 
+  font-weight: 800;
+}
+
+.header-grid p{
+  margin: 0;
+  font-size: clamp(14px, 2.3vw, 22px);
+  line-height: 1.5;
+  color: #2b2b2b;
+  opacity: .9;
+}
+
 .page {
   max-width: 1200px;
   margin: 0 auto;
@@ -41,26 +73,32 @@ p {
 }
 
 #vis1 {
-  padding: 75px;
-  gap: -10px;
+  padding: 30px 50px;
+  padding-left: 75px;
+  padding-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.vis1-text {
+  margin-bottom: 40px;
+  
 }
 
 #vis2 { 
   text-align: center;
-  margin-top: 0px; 
-  padding-top: 30px;
-}
-
-#vis2 .vega-embed { 
-  display: inline-block; 
+  margin-top: 5px; 
+  padding-top: 20px;
+  padding-left: 10px;
 }
 
 #vis4 { 
-  margin-top: -10px; 
+  margin-top: 0px; 
 }
 
 #vis5 {
-  margin-top: -10px;
+  margin-top: 0px;
+  max-width: fit-content;
 }
 
 .pure-g {
@@ -68,14 +106,25 @@ p {
 }
 
 .map-grid {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  border-spacing: 20px;
 }
 
 .text-section {
   background: white;
   border-radius: 4px;
-  padding: 20px;
+  padding: 14px 18px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-top: 0px;
+}
+
+.text-section h2{
+  margin: 6px 0 10px;       
+}
+
+.text-section p{
+  margin: 8px 0 12px;       
+  line-height: 1.55;        
 }
 
 .text-section p {
@@ -97,6 +146,44 @@ p {
   font-size: 13px;
 }
 
+.text-section-species {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px 28px;  
+  padding-top: 1px;     
+  margin-top: 15px; 
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.1);
+}
+
+.text-section-species p {
+  text-align: left;
+}
+
+.text-section-species .section-description {
+  margin: 10px 0 6px;        
+  line-height: 1.55;
+}
+
+.text-section-endangered {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px 28px;  
+  padding-top: 1px;     
+  margin-top: -10px; 
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.1);
+}
+
+.text-section-endangered p {
+  text-align: left;
+}
+
+.text-section-endangered .section-description {
+  margin: 10px 0 6px;        
+  line-height: 1.55;
+}
+
 .map-notes {
   background-color: #A7D489;
   border-radius: 4px;
@@ -110,7 +197,8 @@ p {
 
 .map-notes strong {
   color: #1C352D;
-  font-weight: 700;
+  font-weight: 800;
+  font-size: 20px;
 }
 
 .chart-notes {
@@ -126,7 +214,8 @@ p {
 
 .chart-notes strong {
   color: #1C352D;
-  font-weight: 700;
+  font-weight: 800;
+  font-size: 15px;
 }
 
 .donut-chart-notes {
@@ -153,4 +242,25 @@ p {
   margin-top: 40px;
   font-size: 12px;
   color: #666;
+}
+
+.sources-wrap{ 
+  padding: 10px 0 0; 
+  margin-top: -20px;
+}
+
+.source-single{
+  background:#E8C995;         
+  border-radius:16px;
+  padding:14px 18px;
+  box-shadow:0 1px 0 rgba(0,0,0,.06);
+  color:#1C352D;
+}
+
+.source-single p{
+  margin:0;
+  text-align:left;            
+  line-height:1.55;
+  color:#2b2b2b;
+  font-size:13px;
 }
