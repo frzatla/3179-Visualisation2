@@ -4,7 +4,7 @@
     "text": "Threatened Species by Group and Status (100% Stacked)",
     "fontSize": 18,
     "fontWeight": "bold",
-    "anchor": "middle"
+    "anchor": "start"
   },
   "width": 350,
   "height": 220,
@@ -54,10 +54,10 @@
       "legend": {"orient": "right"}
     },
     "tooltip": [
-      {"field": "group", "type": "nominal", "title": "Group:"},
-      {"field": "status", "type": "nominal", "title": "Status:"},
-      {"aggregate": "sum", "field": "count", "type": "quantitative", "title": "Count:"},
-      {"field": "share", "type": "quantitative", "title": "Share:", "format": ".0%"}
+      {"field": "group", "type": "nominal", "title": "Group"},
+      {"field": "status", "type": "nominal", "title": "Status"},
+      {"aggregate": "sum", "field": "count", "type": "quantitative", "title": "Count"},
+      {"field": "share", "type": "quantitative", "title": "Share", "format": ".0%"}
     ],
   
     "order": { "field": "status_rank", "type": "quantitative", "sort": "ascending" }
